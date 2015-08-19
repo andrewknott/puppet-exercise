@@ -15,9 +15,10 @@ package { 'git':
 } ->
 #Clone the content from exercise git repo
 vcsrepo { '/usr/share/nginx/html/exercise':
-  ensure     => present,
+  ensure     => latest,
   provider   => git,
   source     => 'git://github.com/puppetlabs/exercise-webpage',
+  revision   => 'master',
 }
 
 #Disable SELinux - nginx will not start if SELinux is in enforce mode - https://www.nginx.com/blog/nginx-se-linux-changes-upgrading-rhel-6-6/
