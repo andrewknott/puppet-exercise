@@ -44,7 +44,7 @@ else
   echo Finished, continuing in 5 seconds...
   echo .
   sleep 5
-  clear
+  echo .
   echo Is the web server listening on 8000:
   echo .
   netstat -an | grep tcp | grep -i listen
